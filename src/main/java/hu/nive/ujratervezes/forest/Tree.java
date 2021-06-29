@@ -1,8 +1,9 @@
 package hu.nive.ujratervezes.forest;
 
-public class Tree {
-
+public abstract class Tree {
+    private String name;
     private int height;
+
 
     public Tree() {
         height = 0;
@@ -12,8 +13,11 @@ public class Tree {
         this.height = height;
     }
 
-    public void irrigate() {
+    public abstract void irrigate();
 
+
+    public String getName() {
+        return name;
     }
 
     public int getHeight() {
